@@ -1,73 +1,80 @@
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: black;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://t4.ftcdn.net/jpg/01/11/00/87/360_F_111008744_ovULjX0QKQkULQfXfCxAItZfZE6rOvg3.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0e0d02;
 }
 
 .container {
-    background-color: #fff;
-    width: 30%;
-    min-width: 500px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    padding: 20px 0;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
+    text-align: center;
 }
 
-.timer-display {
-    position: relative;
-    width: 92%;
+.stopwatch {
     background: #fff;
-    left: 4%;
-    font-family: 'Roboto mono', monospace;
-    color: #8c52ff;
-    font-size: 30px;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .buttons {
-    width: 90%;
-    margin: 60px auto 0 auto;
-    display: flex;
-    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
-.buttons button {
-    width: 130px;
-    height: 50px;
-    background-color: #8c52ff;
-    color: black;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background: #f9f9f9;
+    color: #333;
     cursor: pointer;
-    outline: none;
+    transition: background0.3s, border-color 0.3s;
 }
 
-.buttons button:nth-last-child(2) {
-    background-color: greenyellow;
+button:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
 }
 
-.buttons button:nth-last-child(1) {
-    background-color: orangered;
+.laps {
+    text-align: left;
+    margin-top: 20px;
 }
 
-.buttons button:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-}   
+.laps h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#lapsList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lapsList li {
+    background: #f9f9f9;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+
